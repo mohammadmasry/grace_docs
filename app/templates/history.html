@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Upload History - GraceDocs{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Upload History</h2>
+    <a href="{{ url_for('main.index') }}" class="btn btn-outline-primary">⬅ Back to Upload</a>
+</div>
+
+<table class="table table-bordered table-striped align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>File</th>
+            <th>Date</th>
+            <th>FHIR Output</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for upload in uploads %}
+        <tr>
+            <td>{{ upload.filename }}</td>
+            <td>{{ upload.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>
+                <pre style="white-space: pre-wrap; word-break: break-word;">{{ upload.fhir_data | tojson(indent=2) }}</pre>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

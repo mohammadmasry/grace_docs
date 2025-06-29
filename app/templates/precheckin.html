@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}📝 Quick Pre-Check-In{% endblock %}
+
+{% block content %}
+<h3 class="mb-4">📝 Quick Pre-Check-In Form</h3>
+
+<form method="POST" class="mb-4">
+  <div class="mb-3">
+    <label class="form-label">Name:</label>
+    <input type="text" name="patient_name" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Symptoms:</label>
+    <textarea name="symptoms" class="form-control"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Insurance Provider:</label>
+    <input type="text" name="insurance_provider" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a href="{{ url_for('main.index') }}" class="btn btn-secondary ms-2">Back</a>
+</form>
+{% endblock %}

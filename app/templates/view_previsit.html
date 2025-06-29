@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}🩺 Pre-Visit Submissions{% endblock %}
+
+{% block content %}
+
+<h3 class="mb-4">📋 Submitted Pre-Visit Forms</h3>
+
+{% if forms %}
+    <table class="table table-striped table-bordered align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Insurance</th>
+                <th>Symptoms</th>
+                <th>Conditions</th>
+                <th>Medications</th>
+                <th>Allergies</th>
+                <th>Submitted At</th>
+                <th>🔍</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for form in forms %}
+                <tr>
+                    <td>{{ form.patient_name }}</td>
+                    <td>{{ form.date_of_birth }}</td>
+                    <td>{{ form.phone }}</td>
+                    <td>{{ form.email }}</td>
+                    <td>{{ form.insurance_provider }}</td>
+                    <td>{{ form.symptoms }}</td>
+                    <td>{{ form.existing_conditions }}</td>
+                    <td>{{ form.medications }}</td>
+                    <td>{{ form.allergies }}</td>
+                    <td>{{ form.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+                    <td>
+                        <a href="{{ url_for('main.view_single_previsit', id=form.id) }}" class="btn btn-sm btn-outline-primary">
+                            View
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <div class="alert alert-warning">No submissions found yet.</div>
+{% endif %}
+
+<a href="{{ url_for('main.index') }}" class="btn btn-secondary mt-4">⬅️ Back to Dashboard</a>
+
+{% endblock %}
