@@ -49,7 +49,7 @@ GraceDocs is a web application built to help healthcare professionals digitize a
 ### 1. Clone the Repo
 
 ```bash
-git clone <your-repo-url>
+git clone ("https://github.com/mohammadmasry/grace_docs")
 cd grace_docs
 ````
 
