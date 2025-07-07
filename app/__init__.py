@@ -1,8 +1,14 @@
+import os
 from flask import Flask, session
 from .extensions import db, login_manager
 
 def create_app():
-    app = Flask(__name__)
+    # Get absolute path to root/static
+    basedir = os.path.abspath(os.path.dirname(__file__))
+    static_dir = os.path.join(basedir, '..', 'static')
+
+    app = Flask(__name__, static_folder=static_dir, static_url_path='/static')
+
     app.config['UPLOAD_FOLDER'] = 'uploads'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///gracedocs.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -27,7 +33,6 @@ def create_app():
     app.register_blueprint(main)
     app.register_blueprint(auth)
 
-    # 💥 This will create tables if db doesn't exist
     with app.app_context():
         db.create_all()
 

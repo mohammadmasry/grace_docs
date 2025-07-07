@@ -1,12 +1,12 @@
 {
   "resourceType": "DischargeSummary",
   "patient": {
-    "name": "Sarah Thompson DOB:"
+    "name": "Sarah Thompson"
   },
   "diagnosis": {
-    "text": "Community-acquired pneumonia Treatment Given: - IV antibiotics (Ceftriaxone) - Nebulization - Fluids and oxygen therapy Medications on Discharge: - Amoxicillin 500mg, 1 tablet every 8 hours for 7 days - Paracetamol 500mg, as needed for fever Discharge Instructions: - Complete all medications as prescribed - Monitor temperature daily - Rest and stay hydrated - Follow-up visit in 1 week Physician: Dr. Emily Krause"
+    "text": "Community-acquired pneumonia"
   },
-  "medications": null,
-  "follow_up": null,
+  "medications": "- Amoxicillin 500mg, 1 tablet every 8 hours for 7 days - Paracetamol 500mg, as needed for fever",
+  "follow_up": "- Complete all medications as prescribed - Monitor temperature daily - Rest and stay hydrated - Follow-up visit in 1 week Physician: Dr. Emily Krause",
   "raw_text": "Patient Discharge Summary Name: Sarah Thompson DOB: 14/07/1975 Date of Visit: 20/06/2025 Diagnosis: Community-acquired pneumonia Treatment Given: - IV antibiotics (Ceftriaxone) - Nebulization - Fluids and oxygen therapy Medications on Discharge: - Amoxicillin 500mg, 1 tablet every 8 hours for 7 days - Paracetamol 500mg, as needed for fever Discharge Instructions: - Complete all medications as prescribed - Monitor temperature daily - Rest and stay hydrated - Follow-up visit in 1 week Physician: Dr. Emily Krause"
 }

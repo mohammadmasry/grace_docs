@@ -11,25 +11,33 @@ def extract_fields(text):
         "follow_up": None
     }
 
-    if "Name:" in text:
-        match = re.search(r"Name:\s*(.*)", text)
-        if match:
-            fields["patient_name"] = " ".join(match.group(1).split()[0:3])
+    # 👤 Patient Name (EN or DE)
+    name_match = re.search(r"(?:Name:|Name des Patienten:)\s*(.*?)(?:DOB|Geburtsdatum)", text)
+    if name_match:
+        fields["patient_name"] = name_match.group(1).strip()
 
-    if "Diagnosis:" in text:
-        match = re.search(r"Diagnosis:\s*(.*)", text)
-        if match:
-            fields["diagnosis"] = match.group(1).strip()
+    # 🧠 Diagnosis (EN or DE)
+    diagnosis_match = re.search(
+        r"(?:Diagnosis:|Diagnose:)\s*(.*?)(?:Treatment Given:|Medikation|Medications on Discharge:|Discharge Instructions:|Empfehlungen:|$)",
+        text, re.DOTALL
+    )
+    if diagnosis_match:
+        fields["diagnosis"] = diagnosis_match.group(1).strip()
 
-    if "Medications:" in text:
-        match = re.search(r"Medications:\s*(.*)", text)
-        if match:
-            fields["medications"] = match.group(1).strip()
+    # 💊 Medications (EN or DE)
+    meds_match = re.search(
+        r"(?:Medications on Discharge:|Medikation.*?:)\s*(.*?)(?:Discharge Instructions:|Empfehlungen:|$)",
+        text, re.DOTALL
+    )
+    if meds_match:
+        fields["medications"] = meds_match.group(1).strip()
 
-    if "Follow-up:" in text:
-        match = re.search(r"Follow-up:\s*(.*)", text)
-        if match:
-            fields["follow_up"] = match.group(1).strip()
+    # 📋 Follow-up / Instructions (EN or DE)
+    follow_match = re.search(
+        r"(?:Discharge Instructions:|Empfehlungen:|Follow-up:)\s*(.*)", text, re.DOTALL
+    )
+    if follow_match:
+        fields["follow_up"] = follow_match.group(1).strip()
 
     return fields
 
