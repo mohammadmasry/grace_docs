@@ -1,12 +1,12 @@
 {
   "resourceType": "DischargeSummary",
   "patient": {
-    "name": "Sarah Thompson"
+    "name": "Michael Bauer"
   },
   "diagnosis": {
-    "text": "Community-acquired pneumonia"
+    "text": "Mild traumatic brain injury (concussion) after a bicycle accident"
   },
-  "medications": "- Amoxicillin 500mg, 1 tablet every 8 hours for 7 days - Paracetamol 500mg, as needed for fever",
-  "follow_up": "- Complete all medications as prescribed - Monitor temperature daily - Rest and stay hydrated - Follow-up visit in 1 week Physician: Dr. Emily Krause",
-  "raw_text": "Patient Discharge Summary Name: Sarah Thompson DOB: 14/07/1975 Date of Visit: 20/06/2025 Diagnosis: Community-acquired pneumonia Treatment Given: - IV antibiotics (Ceftriaxone) - Nebulization - Fluids and oxygen therapy Medications on Discharge: - Amoxicillin 500mg, 1 tablet every 8 hours for 7 days - Paracetamol 500mg, as needed for fever Discharge Instructions: - Complete all medications as prescribed - Monitor temperature daily - Rest and stay hydrated - Follow-up visit in 1 week Physician: Dr. Emily Krause"
+  "medications": "- Ibuprofen 400mg, 1 tablet every 6-8 hours as needed - Ondansetron 4mg, 1 tablet as needed for nausea",
+  "follow_up": "- Avoid screen time and strenuous activity for 72 hours - Do not drive or operate machinery for 5 days - Monitor for symptoms such as vomiting, confusion, or worsening headache - Follow-up with family doctor in 3 days Patient Discharge Summary Physician: Dr. Markus Neumann",
+  "raw_text": "Patient Discharge Summary Name: Michael Bauer DOB: 09/03/1984 Date of Visit: 28/06/2025 Diagnosis: Mild traumatic brain injury (concussion) after a bicycle accident Treatment Given: - Neurological observation for 24 hours - CT scan of the head (no acute findings) - Pain management with Ibuprofen - Brief physical therapy consultation Medications on Discharge: - Ibuprofen 400mg, 1 tablet every 6-8 hours as needed - Ondansetron 4mg, 1 tablet as needed for nausea Discharge Instructions: - Avoid screen time and strenuous activity for 72 hours - Do not drive or operate machinery for 5 days - Monitor for symptoms such as vomiting, confusion, or worsening headache - Follow-up with family doctor in 3 days Patient Discharge Summary Physician: Dr. Markus Neumann"
 }
