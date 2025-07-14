@@ -76,39 +76,6 @@ Now open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser 🎉
 
 ---
 
-## 📂 Folder Structure
-
-```bash
-grace_docs/
-│
-├── app/
-│   ├── __init__.py
-│   ├── auth.py              # Handles login/signup
-│   ├── routes.py            # Main routes (OCR, form, history)
-│   ├── models.py            # SQLAlchemy models
-│   ├── extensions.py        # DB, LoginManager setup
-│   ├── ocr/
-│   │   └── processor.py     # OCR logic using Tesseract
-│   ├── utils/
-│   │   └── fhir_mapper.py   # Converts text → FHIR JSON
-│   └── templates/           # HTML templates
-│       ├── base.html
-│       ├── index.html
-│       ├── login.html
-│       ├── signup.html
-│       ├── history.html
-│       ├── pre_visit_form.html
-│       ├── view_previsit.html
-│       └── single_previsit.html
-│
-├── uploads/                 # Scanned PDFs and output JSON
-├── instance/gracedocs.db   # SQLite database
-├── run.py                  # App entry point
-├── requirements.txt
-└── README.md               # You are here 😎
-```
-
----
 
 ## 🧪 Test Files
 
@@ -167,20 +134,20 @@ All role-based access is handled cleanly. For example:
 
 ## 👨‍💻 Authors
 
-- **Mohammad El Masri**  
+- **Mohammad El Masri**  (Application Builder)
   Student of Health Informatics  
   Origin: Lebanon 🇱🇧  
   Email: mohammad.el-masri@stud.th-deg.de
 
-- **Kenga Olti**  
+- **Kenga Olti**  (Business Guy)
   Origin: Albania 🇦🇱  
   Email: olti.kenga@stud.th-deg.de
 
-- **Kashfia Anika**  
+- **Kashfia Anika**  (Business and Medical support and a Doctor)
   Origin: Bangladesh 🇧🇩  
   Email: anika.kashfia@stud.th-deg.de
 
-- **Leen Ali**  
+- **Leen Ali**  (Frontend and text)
   Origin: Egypt 🇪🇬  
   Email: leen.ali@stud.th-deg.de
 
