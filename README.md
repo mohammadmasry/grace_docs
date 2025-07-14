@@ -134,16 +134,16 @@ All role-based access is handled cleanly. For example:
 
 ## 👨‍💻 Authors
 
-- **Mohammad El Masri**  (Application Builder)
+- **Mohammad El Masri**  (Backend Dev)
   Student of Health Informatics  
   Origin: Lebanon 🇱🇧  
   Email: mohammad.el-masri@stud.th-deg.de
 
-- **Kenga Olti**  (Business Guy)
+- **Kenga Olti**  (Product Manager)
   Origin: Albania 🇦🇱  
   Email: olti.kenga@stud.th-deg.de
 
-- **Kashfia Anika**  (Business and Medical support and a Doctor)
+- **Kashfia Anika**  (Business Lead)
   Origin: Bangladesh 🇧🇩  
   Email: anika.kashfia@stud.th-deg.de
 
